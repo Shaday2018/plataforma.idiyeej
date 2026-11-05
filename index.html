@@ -25,12 +25,14 @@
                     <p class="text-xs text-teal-400 font-medium">Instituto Digital de Investigaciones y Estudios Especiales Jireh</p>
                 </div>
             </div>
-            <div class="flex items-center gap-4 text-sm">
-                <a href="https://www.investigaya.com" target="_blank" class="bg-teal-500/10 text-teal-400 border border-teal-500/30 hover:bg-teal-500/20 px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+            <div class="flex items-center gap-3 text-sm">
+                <a href="#cursos" class="hidden md:inline-block text-xs text-slate-300 hover:text-teal-400 transition">Cursos</a>
+                <a href="#publicaciones" class="hidden md:inline-block text-xs text-slate-300 hover:text-teal-400 transition">Publicaciones</a>
+                <button onclick="irAInvestigaya('general')" class="bg-teal-500/10 text-teal-400 border border-teal-500/30 hover:bg-teal-500/20 px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
                     <i data-lucide="external-link" class="w-4 h-4"></i> Herramienta Oficial: App Investigaya
-                </a>
+                </button>
                 <a href="mailto:asesorias@idiyeej.edu.pe" class="hidden sm:flex items-center gap-1.5 text-slate-300 hover:text-teal-400 transition text-xs">
-                    <i data-lucide="mail" class="w-4 h-4 text-teal-400"></i> asesorias@idiyeej.edu.pe
+                    <i data-lucide="mail" class="w-4 h-4 text-teal-400"></i>
                 </a>
             </div>
         </div>
@@ -40,65 +42,79 @@
     <section class="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 py-14 px-4 text-center border-b border-slate-800">
         <div class="max-w-4xl mx-auto space-y-5">
             <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-4 py-1.5 rounded-full border border-teal-500/20 inline-flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4"></i> Periodo Abierto de Asesoramiento Multidisciplinario Masivo
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Ecosistema Digital de Investigación & Formación Científica
             </span>
             <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-                Ecosistema Científico IDIyEEJ & <span class="text-teal-400">App Investigaya</span>
+                Portal Científico IDIyEEJ & <span class="text-teal-400">App Investigaya</span>
             </h2>
             <p class="text-slate-300 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
-                El Instituto Digital de Investigaciones y Estudios Especiales Jireh impulsa la investigación científica en todas las áreas del conocimiento humano, integrando la tecnología de la <strong class="text-teal-400 font-semibold">App Investigaya</strong> como su herramienta transversal con IA modular para proyectos e informes finales de tesis.
+                El Instituto Digital de Investigaciones y Estudios Especiales Jireh impulsa el desarrollo académico integral: asesoría especializada, cursos de alto impacto, publicación de artículos y la integración transversal de la tecnología con IA modular de la <strong class="text-teal-400 font-semibold">App Investigaya</strong>.
             </p>
         </div>
     </section>
 
-    <!-- ÁREAS MULTIDISCIPLINARIAS DE INVESTIGACIÓN -->
+    <!-- ÁREAS MULTIDISCIPLINARIAS DE INVESTIGACIÓN INTERACTIVAS -->
     <section class="bg-slate-950 py-10 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-center text-xs font-bold text-teal-400 uppercase tracking-widest mb-6">Áreas de Investigación Multidisciplinarias del Instituto</h3>
+            <h3 class="text-center text-xs font-bold text-teal-400 uppercase tracking-widest mb-2">Áreas de Investigación Multidisciplinarias</h3>
+            <p class="text-center text-xs text-slate-400 mb-6">Haz clic en tu disciplina para vincular tu registro a la App Investigaya</p>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="stethoscope" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
+                
+                <div onclick="seleccionarDisciplina('Ciencias de la Salud')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="stethoscope" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
                     <h4 class="text-xs font-bold text-white">Ciencias de la Salud</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Medicina, Enfermería, Farmacia, Nutrición</p>
+                    <p class="text-[10px] text-slate-400 mt-1">Medicina, Enfermería, Farmacia</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="beef" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
-                    <h4 class="text-xs font-bold text-white">Ciencias Pecuarias y Agrarias</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Veterinaria, Zootecnia, Agronomía, Agroindustria</p>
+
+                <div onclick="seleccionarDisciplina('Ciencias Pecuarias y Agrarias')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="beef" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xs font-bold text-white">Pecuarias y Agrarias</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Veterinaria, Zootecnia, Agronomía</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="cpu" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
-                    <h4 class="text-xs font-bold text-white">Ingeniería y Tecnología</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Sistemas, Civil, Industrial, Ambiental</p>
+
+                <div onclick="seleccionarDisciplina('Ingeniería y Tecnología')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="cpu" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xs font-bold text-white">Ingeniería y Tecn.</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Sistemas, Civil, Industrial</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="briefcase" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
-                    <h4 class="text-xs font-bold text-white">Ciencias Emp. y Contables</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Administración, Contabilidad, Marketing</p>
+
+                <div onclick="seleccionarDisciplina('Ciencias Empresariales y Contables')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="briefcase" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xs font-bold text-white">Ciencias Emp. y Cont.</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Administración, Contabilidad</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="book-open" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
-                    <h4 class="text-xs font-bold text-white">Educación y Humanidades</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Pedagogía, Psicología, Sociología</p>
+
+                <div onclick="seleccionarDisciplina('Educación y Humanidades')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="book-open" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xs font-bold text-white">Educación y Hum.</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Pedagogía, Psicología</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500/40 transition">
-                    <i data-lucide="scale" class="w-6 h-6 text-teal-400 mx-auto mb-2"></i>
-                    <h4 class="text-xs font-bold text-white">Derecho y C. Políticas</h4>
-                    <p class="text-[10px] text-slate-400 mt-1">Derecho Pen., Civ., Constitucional</p>
+
+                <div onclick="seleccionarDisciplina('Derecho y Ciencias Políticas')" class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center hover:border-teal-500 transition cursor-pointer group">
+                    <i data-lucide="scale" class="w-6 h-6 text-teal-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xs font-bold text-white">Derecho y C. Pol.</h4>
+                    <p class="text-[10px] text-slate-400 mt-1">Penal, Civil, Constitucional</p>
+                    <span class="inline-block mt-2 text-[9px] text-teal-400 font-semibold">Conectar App →</span>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- MATRIZ DE SERVICIOS Y CALCULADORA -->
-    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full space-y-12">
+    <!-- PLANES DE ASESORÍA Y LICENCIA APP INVESTIGAYA -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full space-y-14">
         
-        <div>
-            <div class="mb-8">
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i data-lucide="layers" class="w-5 h-5 text-teal-400"></i> Plan de Licencias y Asesoramiento Especializado
+        <div id="planes">
+            <div class="mb-8 text-center md:text-left">
+                <h3 class="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                    <i data-lucide="layers" class="w-5 h-5 text-teal-400"></i> Licencia de App & Asesoramiento Especializado IDIyEEJ
                 </h3>
-                <p class="text-xs text-slate-400 mt-1">Adquiere la herramienta oficial App Investigaya de forma independiente o combínala con el acompañamiento experto de IDIyEEJ.</p>
+                <p class="text-xs text-slate-400 mt-1">Elige la herramienta oficial o combínala con supervisión personalizada por asesores expertos.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
@@ -107,11 +123,11 @@
                     <div>
                         <div class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-2">Herramienta Oficial Transversal</div>
                         <h4 class="text-xl font-bold text-white mb-1">App Investigaya</h4>
-                        <p class="text-slate-400 text-xs mb-4">Plataforma digital con IA modular para desarrollo de tesis en cualquier disciplina científica.</p>
+                        <p class="text-slate-400 text-xs mb-4">Licencia de acceso a la plataforma digital con IA modular para desarrollo de tesis en cualquier disciplina.</p>
                         <div class="text-3xl font-extrabold text-white mb-4">$99 <span class="text-xs font-normal text-slate-400">USD</span></div>
                         <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Acceso completo a investigaya.com</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Módulos con IA para todas las carreras</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Registro de usuario nuevo en la App</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Módulos IA para todas las carreras</li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Estructuración autónoma e inmediata</li>
                         </ul>
                     </div>
@@ -125,12 +141,12 @@
                     <div>
                         <div class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-2">Monitoreo IDIyEEJ</div>
                         <h4 class="text-xl font-bold text-white mb-1">Asesoramiento Parcial</h4>
-                        <p class="text-slate-400 text-xs mb-4">Supervisión metódica por especialistas según tu disciplina científica.</p>
+                        <p class="text-slate-400 text-xs mb-4">Supervisión metódica y revisión de avances registrados a través de la App Investigaya.</p>
                         <div class="text-3xl font-extrabold text-white mb-4">$149 <span class="text-xs font-normal text-slate-400">USD</span></div>
                         <ul class="text-xs text-slate-300 space-y-2 mb-6">
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Monitoreo de avances en la App</li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Revisión metodológica personalizada</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Sesiones de control por Zoom</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Sesiones de control vía Zoom</li>
                         </ul>
                     </div>
                     <button onclick="toggleService('parcial', 149)" id="btn-parcial" class="w-full py-2.5 rounded-lg font-medium text-xs border border-teal-500 text-teal-400 hover:bg-teal-500/10 transition">
@@ -147,7 +163,7 @@
                         <p class="text-slate-400 text-xs mb-4">Acompañamiento total, procesamiento estadístico y redacción técnica de informe final.</p>
                         <div class="text-3xl font-extrabold text-white mb-4">$299 <span class="text-xs font-normal text-slate-400">USD</span></div>
                         <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Licencia App Investigaya incluida</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Incluye Licencia App Investigaya</li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Análisis de datos y estadística completa</li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Reporte antiplagio y preparación de jurado</li>
                         </ul>
@@ -159,42 +175,89 @@
             </div>
         </div>
 
-        <!-- RESUMEN Y REGISTRO MULTIDISCIPLINARIO -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-8">
+        <!-- RECURSOS ADICIONALES DEL INSTITUTO (CURSOS Y PUBLICACIÓN) -->
+        <div id="servicios-instituto" class="border-t border-slate-800 pt-10">
+            <div class="text-center mb-8">
+                <h3 class="text-xl font-bold text-white">Servicios Científicos y Formación Académica IDIyEEJ</h3>
+                <p class="text-xs text-slate-400 mt-1">Potenciando las capacidades investigativas de la comunidad universitaria y profesional</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Cursos -->
+                <div id="cursos" class="bg-slate-950 border border-slate-800 rounded-xl p-5 hover:border-teal-500/40 transition">
+                    <div class="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">Cursos & Talleres Especializados</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Capacitaciones continuas en Redacción Científica, Análisis Estadístico con SPSS/R, y Metodología de Investigación.</p>
+                    <a href="https://wa.me/51987654321?text=Deseo%20informacion%20de%20los%20cursos%20IDIyEEJ" target="_blank" class="text-xs text-teal-400 font-semibold hover:underline inline-flex items-center gap-1">Consultar Fechas <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+                </div>
+
+                <!-- Publicación de Artículos -->
+                <div id="publicaciones" class="bg-slate-950 border border-slate-800 rounded-xl p-5 hover:border-teal-500/40 transition">
+                    <div class="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">Publicación de Artículos Científicos</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Adaptación de informes de tesis a formato artículo para su arbitraje e indización en revistas Scopus, Latindex y SciELO.</p>
+                    <a href="https://wa.me/51987654321?text=Deseo%20asesoria%20para%20publicar%20mi%20articulo%20cientifico" target="_blank" class="text-xs text-teal-400 font-semibold hover:underline inline-flex items-center gap-1">Asesoría de Publicación <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+                </div>
+
+                <!-- Semilleros -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 hover:border-teal-500/40 transition">
+                    <div class="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">Semilleros de Investigación</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Integración a redes de trabajo multidisciplinarias con investigadores mentores para proyectos financiados.</p>
+                    <a href="mailto:asesorias@idiyeej.edu.pe?subject=Postulacion%20a%20Semillero%20IDIyEEJ" class="text-xs text-teal-400 font-semibold hover:underline inline-flex items-center gap-1">Unirse al Semillero <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMEN Y REGISTRO CON OPCIÓN DE PAGO REAL -->
+        <div id="registro-seccion" class="bg-slate-950 border border-slate-800 rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-8">
             <div>
                 <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i data-lucide="calculator" class="w-5 h-5 text-teal-400"></i> Resumen del Pedido / Inversión
+                    <i data-lucide="calculator" class="w-5 h-5 text-teal-400"></i> Resumen de Selección & Inversión
                 </h4>
                 <div id="selection-list" class="space-y-2 text-xs text-slate-400 mb-6">
-                    <p class="italic">Selecciona uno o más servicios para calcular tu plan de investigación.</p>
+                    <p class="italic">Selecciona un plan o disciplina para activar tu registro.</p>
                 </div>
-                <div class="border-t border-slate-800 pt-4 flex justify-between items-center">
+                <div class="border-t border-slate-800 pt-4 flex justify-between items-center mb-6">
                     <span class="text-sm font-semibold text-slate-300">Inversión Total:</span>
                     <span id="total-price" class="text-2xl font-bold text-teal-400">$0 USD</span>
                 </div>
+
+                <!-- OPCIONES DE PAGO DIRECTO INSTITUCIONAL -->
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-xs space-y-2">
+                    <h5 class="font-bold text-white flex items-center gap-1.5"><i data-lucide="credit-card" class="w-4 h-4 text-teal-400"></i> Medios de Pago Oficiales IDIyEEJ</h5>
+                    <p class="text-slate-400"><strong>Yape / Plin / Transferencia Perú:</strong> BCP / Interbank (Solicitar QR al registrarse)</p>
+                    <p class="text-slate-400"><strong>Internacional (USD):</strong> PayPal / Tarjeta de Crédito vía App Investigaya</p>
+                </div>
             </div>
 
-            <!-- REGISTRO Y ACTIVACIÓN DE LINK -->
+            <!-- FORMULARIO DE REGISTRO CON REDIRECCIÓN A REGISTRO NUEVO -->
             <form onsubmit="handleRegisterAndRedirect(event)" class="space-y-4">
                 <h4 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                    <i data-lucide="user-check" class="w-5 h-5 text-teal-400"></i> Registro de Tesista & Disciplina
+                    <i data-lucide="user-check" class="w-5 h-5 text-teal-400"></i> Registro de Tesista & Activación
                 </h4>
                 <div>
                     <label class="block text-xs font-medium text-slate-400 mb-1">Nombre Completo</label>
-                    <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500" placeholder="Ej. Dr. / Mg. / Ing. / Lic. Usuario">
+                    <input type="text" id="nombre_usuario" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500" placeholder="Ej. Dr. / Mg. / Lic. Usuario">
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-medium text-slate-400 mb-1">Área / Carrera</label>
-                        <select required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500">
+                        <select id="carrera_select" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500">
                             <option value="">Selecciona tu Área</option>
-                            <option>Ciencias Pecuarias y Agrarias</option>
-                            <option>Ciencias de la Salud</option>
-                            <option>Ingeniería y Tecnología</option>
-                            <option>Ciencias Empresariales y Contables</option>
-                            <option>Educación y Humanidades</option>
-                            <option>Derecho y Ciencias Políticas</option>
-                            <option>Otras Disciplinas</option>
+                            <option value="Ciencias Pecuarias y Agrarias">Ciencias Pecuarias y Agrarias</option>
+                            <option value="Ciencias de la Salud">Ciencias de la Salud</option>
+                            <option value="Ingeniería y Tecnología">Ingeniería y Tecnología</option>
+                            <option value="Ciencias Empresariales y Contables">Ciencias Empresariales y Contables</option>
+                            <option value="Educación y Humanidades">Educación y Humanidades</option>
+                            <option value="Derecho y Ciencias Políticas">Derecho y Ciencias Políticas</option>
+                            <option value="Otras Disciplinas">Otras Disciplinas</option>
                         </select>
                     </div>
                     <div>
@@ -207,11 +270,11 @@
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-medium text-slate-400 mb-1">WhatsApp de Contacto</label>
-                    <input type="tel" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500" placeholder="+51 ...">
+                    <label class="block text-xs font-medium text-slate-400 mb-1">WhatsApp de Contacto (para confirmación de pago)</label>
+                    <input type="tel" id="whatsapp_usuario" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-teal-500" placeholder="+51 ...">
                 </div>
                 <button type="submit" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-3 rounded-lg text-xs transition flex items-center justify-center gap-2">
-                    <span>Activar Registro e ir a App Investigaya</span>
+                    <span>Completar Registro & Conectar a App Investigaya</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
             </form>
@@ -220,14 +283,22 @@
     </main>
 
     <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500">
-        <p>&copy; 2026 Instituto Digital de Investigaciones y Estudios Especiales Jireh (IDIyEEJ). Plataforma Oficial Multidisciplinaria con integración a <a href="https://www.investigaya.com" target="_blank" class="text-teal-400 underline font-medium">investigaya.com</a>.</p>
+        <p>&copy; 2026 Instituto Digital de Investigaciones y Estudios Especiales Jireh (IDIyEEJ). Plataforma Oficial Multidisciplinaria integrada a la <a href="https://www.investigaya.com" target="_blank" class="text-teal-400 underline font-medium">App Investigaya</a>.</p>
     </footer>
 
     <script>
         lucide.createIcons();
 
         const selected = {};
-        const names = { app: "App Investigaya", parcial: "Asesoramiento Parcial IDIyEEJ", completo: "Asesoramiento Completo IDIyEEJ" };
+        const names = { app: "Licencia App Investigaya", parcial: "Asesoramiento Parcial IDIyEEJ", completo: "Asesoramiento Completo IDIyEEJ" };
+
+        function seleccionarDisciplina(carrera) {
+            document.getElementById('carrera_select').value = carrera;
+            if (!selected['app']) {
+                toggleService('app', 99);
+            }
+            document.getElementById('registro-seccion').scrollIntoView({ behavior: 'smooth' });
+        }
 
         function toggleService(key, price) {
             if (selected[key]) {
@@ -249,7 +320,7 @@
             let total = 0;
             const keys = Object.keys(selected);
             if (keys.length === 0) {
-                list.innerHTML = '<p class="italic">Selecciona uno o más servicios para calcular tu plan de investigación.</p>';
+                list.innerHTML = '<p class="italic">Selecciona un plan o disciplina para activar tu registro.</p>';
                 document.getElementById('total-price').innerText = '$0 USD';
                 return;
             }
@@ -263,10 +334,21 @@
             document.getElementById('total-price').innerText = `$${total} USD`;
         }
 
+        function irAInvestigaya(contexto) {
+            // Se fuerza el enlace de registro público limpia
+            window.open("https://www.investigaya.com/", "_blank");
+        }
+
         function handleRegisterAndRedirect(e) {
             e.preventDefault();
-            alert("Registro recibido en IDIyEEJ. Se enviará confirmación a tu WhatsApp y serás redirigido a la App Investigaya (https://www.investigaya.com).");
-            window.open("https://www.investigaya.com", "_blank");
+            const nombre = document.getElementById('nombre_usuario').value;
+            const carrera = document.getElementById('carrera_select').value;
+            const ws = document.getElementById('whatsapp_usuario').value;
+
+            alert(`¡Bendiciones ${nombre}! Registro iniciado para ${carrera}. Se abrirá la pantalla de la App Investigaya para crear tu cuenta de usuario. Un asesor de IDIyEEJ te contactará al WhatsApp ${ws} para coordinar los detalles de tu pago.`);
+            
+            // Redirección directa al portal oficial de Investigaya
+            window.open("https://www.investigaya.com/", "_blank");
         }
     </script>
 </body>
